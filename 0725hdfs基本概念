@@ -39,3 +39,5 @@ namespace，包括数据块到文件的映射、文件的属性等，都存储�
 
 流水线复制；当本地临时文件积累到一个block大小时开始向第一个datanode传送数据，第一个datanode在接受数据的同时传送给第二个datanode，以此类推，直到最后
 一个datanode存储完成。
+
+![image](https://github.com/itsohorriblela/Hadoop-Diary/blob/master/images/clientreadfromHDFS.png)
