@@ -59,3 +59,5 @@ namespace，包括数据块到文件的映射、文件的属性等，都存储�
 一个datanode存储完成。
 ![image](https://github.com/itsohorriblela/Hadoop-Diary/upload/master/images/clientwriteonHDFS.png)
 ![image](https://github.com/itsohorriblela/Hadoop-Diary/blob/master/images/clientreadfromHDFS.png)
+HDFS总览
+![image](https://github.com/itsohorriblela/Hadoop-Diary/tree/master/images/HDFS.png)
