@@ -10,3 +10,7 @@
     和谁争我都不屑;
     我爱大自然,其次就是艺术;
     我双手烤着生命之火取暖;火萎了,我也准备走了。
+    I strove with none, 
+    for none was worth my strife,
+    Nature I loved, and next to Nature, Art;
+    I warmed both hands before the fire of life,It sinks, and I am ready to depart. 
