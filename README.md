@@ -14,3 +14,10 @@
     for none was worth my strife,
     Nature I loved, and next to Nature, Art;
     I warmed both hands before the fire of life,It sinks, and I am ready to depart. 
+
+版本记录：
+
+    Hadoop 2.8.5
+    HBase 2.0.5
+    zookeeper 3.5.5
+    jdk 1.8.0
