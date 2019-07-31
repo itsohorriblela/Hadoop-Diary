@@ -1,0 +1,26 @@
+1.namenode
+文件系统映像和编辑日志。
+客户端执行写操作时，首先被记录到编辑日志中，日志被分为多个文件，称为段“segment”
+每个fsimage文件都是文件系统元数据的一个完整永久性检查点，namenode启动阶段将fsimage载入内存重构元数据最近状态。数据块存储在datanode中，namenode将块映射
+关系保存在内存中
+重启操作需要恢复编辑日志中的各项事务占用时间：运行secondary namenode，为主namenode中的文件系统元数据创建检查点。（http协议）
+secondary namenode从主那么浓的中取走edits和fsimage，将edits加载入fsimage，将新的fsimage发给主namenode
+
+系统中数据块的位置并不是namenode维护的，而是以块列表的形式存放在datanode
+
+2.工具：
+dfsadmin
+fsck
+块扫描器
+均衡器（balancer）将块从繁忙的datanode移动到空闲的datanode，直到每个datanode的使用率与整个集群的使用率非常接近
+
+3.监控
+日志
+堆栈跟踪
+
+4.维护
+元数据备份
+数据备份
+
+5.委任和解除节点
+不允许随意终止datanode
