@@ -24,6 +24,7 @@ kafka相关概念解释
       8.leader：replica 中的一个角色， producer 和 consumer 只跟 leader 交互。
       9.follower：replica 中的一个角色，从 leader 中复制数据。
       10.controller：kafka 集群中的其中一个服务器，用来进行 leader election 以及 各种 failover。
+      11.offset：位移量记录消息的位置信息
 
 Kafka 通过 topic 对存储的流数据进行分类。生产者往topic里写消息，消费者从读消息。为了做到水平扩展，一个topic实际是由多个partition组成的，遇到瓶颈时，
 可以通过增加partition的数量来进行横向扩容。单个partition内是保证消息有序。每新写一条消息，kafka就是在对应的文件append写，所以性能非常高。
@@ -71,7 +72,8 @@ producer：
  consumers
  
     在kafka中，当前读到消息的offset值是由consumer来维护的，因此，consumer可以自己决定如何读取kafka中的数据。比如，consumer可以通过重设offset
-    值来重新消费已消费过的数据。不管有没有被消费，kafka会保存数据一段时间，这个时间周期是可配置的，只有到了过期时间，kafka才会删除这些数据。 
+    值来重新消费已消费过的数据。不管有没有被消费，kafka会保存数据一段时间，这个时间周期是可配置的，只有到了过期时间，kafka才会删除这些数据。
+    每条消息再一个消费组里只能消费一次，不同消费组可以重复消费一条消息
  
  消息可靠性
  
