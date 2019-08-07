@@ -11,10 +11,11 @@ Kafka:一个分布式流处理平台
     
 kafka相关概念解释
 
+      0.message：消息，kafka存储和通信的基本单位
       1.producer：消息生产者，发布消息到 kafka 集群的终端或服务。
-      2.broker：kafka 集群中包含的服务器。
+      2.broker：kafka 集群中包含的服务器。一个缓存的代理，可以理解成一个应用进程
       3.topic：每条发布到 kafka 集群的消息属于的类别，即 kafka 是面向 topic 的。消息存放的目录即主题。topic由一些Partition Logs
-      (分区日志)组成.
+      (分区日志)组成。就像数据库的table一样
       4.partition：partition 是物理上的概念，每个 topic 包含一个或多个 partition。kafka 分配的单位是 partition。
       5.consumer：从 kafka 集群中消费消息的终端或服务。
       6.consumer group：high-level consumer API 中，每个 consumer 都属于一个 consumer group，每条消息只能被 consumer group 
